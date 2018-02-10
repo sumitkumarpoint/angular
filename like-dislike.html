@@ -1,0 +1,42 @@
+
+<html ng-app="myModule">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="./like-dislike.js"></script>
+</head>
+<body >
+
+<div ng-controller="myController">
+    <div align="center">
+Rows to show :<input type="number" ng-model="limit">
+        short :  <input type="radio" value="+name" name="order" ng-model="ord">ascending
+
+        <input type="radio" value="-name"  name="order" ng-model="ord">ascending
+    <table cols="6">
+
+           <thead>
+           <tr>
+           <th>Technology</th>
+           <th>Likes</th>
+           <th>Dislike</th>
+           <th>Likes / Dislike</th>
+           </tr>
+           </thead>
+
+           <tr ng-repeat="technology in technologies | limitTo : limit |orderBy :ord ">
+               <td>{{technology.name | uppercase}}</td>
+            <td>{{technology.likes}}</td>
+            <td>{{technology.dislikes}}</td>
+            <td><input type="button" ng-click="increaseLikes(technology)" value="like">
+
+                <input type="button" ng-click="increaseDislikes(technology)" value="dislike"></td></tr>
+    </table>
+
+
+    </div >
+</div>
+
+
+</body>
+
+</html>

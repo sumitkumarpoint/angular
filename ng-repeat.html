@@ -1,0 +1,23 @@
+<html ng-app="myModule">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="./script1.js"></script>
+</head>
+<body >
+<div ng-controller="myController">
+    <div ng-repeat="country in countries">
+        <ul>
+            <td>{{country.name}}</td>
+            <ul ng-repeat="city in country.cities">
+                <td>{{$index+1}}.{{city.name}}</td>
+            </ul>
+        </ul>
+
+    </div>
+    <div >
+</div>
+
+
+</body>
+
+</html>
