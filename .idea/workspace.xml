@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5408a473-4aae-44fa-b142-fc7fcd1147c2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/like-dislike.html" afterPath="$PROJECT_DIR$/like-dislike.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/like-dislike.js" afterPath="$PROJECT_DIR$/like-dislike.js" />
     </list>
@@ -16,21 +14,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="like-dislike.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="like-dislike.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/like-dislike.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="41" column="7" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="41" selection-end-column="7" />
+            <state relative-caret-position="230">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="like-dislike.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="like-dislike.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/like-dislike.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="40" lean-forward="true" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+            <state relative-caret-position="238">
+              <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -48,8 +46,8 @@
         <option value="$PROJECT_DIR$/script1.js" />
         <option value="$PROJECT_DIR$/input.html" />
         <option value="$PROJECT_DIR$/script.js" />
-        <option value="$PROJECT_DIR$/like-dislike.js" />
         <option value="$PROJECT_DIR$/like-dislike.html" />
+        <option value="$PROJECT_DIR$/like-dislike.js" />
       </list>
     </option>
   </component>
@@ -101,7 +99,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/Sites/project" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -234,12 +232,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1518243508338</updated>
-      <workItem from="1518243509835" duration="14104000" />
+      <workItem from="1518243509835" duration="19203000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14104000" />
+    <option name="totallyTimeSpent" value="19203000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1040" height="744" extended-state="6" />
@@ -307,18 +305,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/like-dislike.js">
+    <entry file="file://$PROJECT_DIR$/like-dislike.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="40" lean-forward="true" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+        <state relative-caret-position="230">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/like-dislike.html">
+    <entry file="file://$PROJECT_DIR$/like-dislike.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="41" column="7" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="41" selection-end-column="7" />
+        <state relative-caret-position="238">
+          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
           <folding />
         </state>
       </provider>

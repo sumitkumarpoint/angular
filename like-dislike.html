@@ -5,6 +5,11 @@
     <script src="./like-dislike.js"></script>
 </head>
 <body >
+<style>
+    th{
+        cursor: pointer;
+    }
+</style>
 
 <div ng-controller="myController">
     <div align="center">
@@ -16,7 +21,7 @@ Rows to show :<input type="number" ng-model="limit">
 
            <thead>
            <tr>
-           <th>Technology</th>
+           <th ng-click="sort()">Technology</th>
            <th>Likes</th>
            <th>Dislike</th>
            <th>Likes / Dislike</th>
