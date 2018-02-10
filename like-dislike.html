@@ -16,7 +16,9 @@
 Rows to show :<input type="number" ng-model="limit">
         short :  <input type="radio" value="+name" name="order" ng-model="ord">ascending
 
-        <input type="radio" value="-name"  name="order" ng-model="ord">ascending
+        <input type="radio" value="-name"  name="order" ng-model="ord">ascending<br><br>
+        Search By Name:<input ng-model="search.name"><input type="checkbox" ng-model="exact">Exact mach<br><br>
+
     <table cols="6">
 
            <thead>
@@ -28,7 +30,7 @@ Rows to show :<input type="number" ng-model="limit">
            </tr>
            </thead>
 
-           <tr ng-repeat="technology in technologies | limitTo : limit |orderBy :ord ">
+           <tr ng-repeat="technology in technologies | limitTo : limit |orderBy :ord|filter:search:exact ">
                <td>{{technology.name | uppercase}}</td>
             <td>{{technology.likes}}</td>
             <td>{{technology.dislikes}}</td>

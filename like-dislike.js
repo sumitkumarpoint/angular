@@ -12,6 +12,7 @@ var myController=function($scope) {
     $scope.limit=3;
     $scope.ord='+name';
 
+
     $scope.sort=function(){
         if( $scope.ord=='+name'){
             $scope.ord='-name';
