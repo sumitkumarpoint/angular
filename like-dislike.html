@@ -5,6 +5,7 @@
     <script src="./like-dislike.js"></script>
 </head>
 <body >
+<div ng-include="hello.html"></div>
 <style>
     th{
         cursor: pointer;
@@ -18,6 +19,7 @@ Rows to show :<input type="number" ng-model="limit">
 
         <input type="radio" value="-name"  name="order" ng-model="ord">ascending<br><br>
         Search By Name:<input ng-model="search.name"><input type="checkbox" ng-model="exact">Exact mach<br><br>
+<input type="checkbox" ng-model="hidesa">Hide Dislike
 
     <table cols="6">
 
@@ -25,7 +27,8 @@ Rows to show :<input type="number" ng-model="limit">
            <tr>
            <th ng-click="sort()">Technology</th>
            <th>Likes</th>
-           <th>Dislike</th>
+               <th ng-hide="hidesa">Dislike</th>
+               <th ng-show="hidesa">Dislike</th>
            <th>Likes / Dislike</th>
            </tr>
            </thead>
@@ -33,7 +36,8 @@ Rows to show :<input type="number" ng-model="limit">
            <tr ng-repeat="technology in technologies | limitTo : limit |orderBy :ord|filter:search:exact ">
                <td>{{technology.name | uppercase}}</td>
             <td>{{technology.likes}}</td>
-            <td>{{technology.dislikes}}</td>
+            <td ng-hide="hidesa">{{technology.dislikes}}</td>
+               <td ng-show="hidesa">####</td>
             <td><input type="button" ng-click="increaseLikes(technology)" value="like">
 
                 <input type="button" ng-click="increaseDislikes(technology)" value="dislike"></td></tr>
