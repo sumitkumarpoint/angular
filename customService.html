@@ -1,0 +1,31 @@
+<html >
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="customService.js" type="text/javascript"></script>
+    <script src="Service.js" type="text/javascript"></script>
+</head>
+<body ng-app="pp">
+<div ng-controller="myController">
+<table align="center">
+    <tr>
+    <td>
+        <input type="text" placeholder="input" ng-model="input">
+    </td>
+    </tr>
+    <tr>
+        <td>
+           <p ng-bind="output">
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="change" ng-click="toChange(input)">
+        </td>
+
+    </tr>
+</table>
+</div>
+</body>
+</html>

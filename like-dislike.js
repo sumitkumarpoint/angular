@@ -11,6 +11,20 @@ var myController=function($scope) {
     $scope.technologies=technologies;
     $scope.limit=3;
     $scope.ord='+name';
+  $scope.search=function (item){
+      if(  $scope.searchText==undefined){
+
+          return true;
+      }
+      else {
+          if (item.name.toLowerCase().indexOf($scope.searchText.toLowerCase()) >= -1) {
+              return true
+          }
+      }
+      return false;
+
+
+  }
 
 
     $scope.sort=function(){

@@ -1,0 +1,41 @@
+<html>
+<head><script src="jquery-3.3.1.min.js"></script></head>
+<body>
+<script>
+$(document).ready(function(){
+	   $("#hide").click(function(){
+		$("p").hide();})
+
+		$("#show").click(function(){
+		$("p").show	();})
+
+		$("#toggle").click(function(){
+		$("p").toggle();})
+		
+
+		$("#slide").click(function(){
+		$("p").slide();})
+		
+
+		$("#fade").click(function(){
+		$("p").fadeIn();})
+		
+
+        $("#animate").click(function(){
+		$("p").animatex();})
+		
+
+
+
+
+
+})</script>
+<p>hello</p>
+<input type="button" id="hide" value="hide">
+<input type="button" id="show" value="show">
+<input type="button" id="toggle" value="toggle">
+<input type="button" id="slide" value="slide">
+<input type="button" id="fade" value="fade">
+<input type="button" id="animate" value="animate">
+</body>
+</html>

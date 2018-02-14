@@ -1,0 +1,19 @@
+<html>
+<head>  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+   </head>
+<body ng-app="myApp"  ng-controller="controller">
+
+<script>
+var app=angular.module("myApp",[]);
+	
+
+app.controller("controller",function($scope,$http){
+$http.get("welcome.htm").then(function (response){
+      $scope.message= response.data; 
+  });
+});
+</script>
+{{message}}
+<h1  ng-bind="message"></h1>
+</body>
+</html>
