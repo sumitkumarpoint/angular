@@ -4,56 +4,88 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <link rel="stylesheet" href="css/style.css"/>
 
 </head>
 
 <body  ng-app="myApp" ng-controller="controller">
 <div class="text-center">
-    <div style="font-family: 'Cooper Black' ;font-size: 2em;" class="well well-xs bg-success" >Sign up</div>
     <form name="sForm" novalidate>
+        <table align="center">
+            <tr>
+                <th colspan="3">
+                    <div style="font-family: 'Cooper Black' ;font-size: 2em;"  >Sign up</div>
+                </th>
+            </tr>
 
 
-        <div class="form-group">
-            <input name="fname" ng-model="fname" class="form-control text-center" type="text" placeholder="First name" required>
-            <span style="color: red;" ng-hide="sForm.fname.$valid">First Name is required</span><br>
-        </div>
+            <tr><td>
+                <span class="la">First Name</span>
+                <input name="fname" ng-model="fname" class="form-control text-center" type="text" placeholder="First name" required>
+                <span style="color: red;" ng-hide="sForm.fname.$valid">First Name is required</span>
 
-
-
-        <div class="form-group">
-            <input name="lname" ng-model="lname" class="form-control text-center" type="text" placeholder="Last name" required>
-            <span style="color: red;" ng-hide="sForm.lname.$valid">Last Name is required</span><br>
-        </div>
-
-
-
-        <div class="form-group">
-            <input name="em" ng-model="em" class="form-control text-center" type="email" placeholder="User name or Email" required>
-            <span style="color: red;" ng-show="sForm.em.$error.required">Username or Email is required</span>
-            <span style="color: red;" ng-show="sForm.em.$error.email">invalid email</span><br>
-        </div>
-
-
-        <div class="form-group">
-            <input name="ps" ng-model="ps" class="form-control  text-center" type="password" placeholder="Password" required>
-            <span style="color: red;" ng-hide="sForm.ps.$valid">Password is required</span><br>
-        </div>
+            </td></tr>
 
 
 
-        <div class="form-group">
-            <input name="cps" ng-model="cps" class="form-control  text-center" type="password" placeholder="Confirm Password" required>
-            <span style="color: red;" ng-hide="sForm.cps.$valid">Confirm Password is required</span> <br>
-        </div>
+            <tr><td>
+                <span class="la">Last Name</span>
+                <input name="lname" ng-model="lname" class="form-control text-center" type="text" placeholder="Last name" required>
+                <span style="color: red;" ng-hide="sForm.lname.$valid">Last Name is required</span>
+
+            </td></tr>
+
+
+            <tr><td>
+                <span class="la">Email</span>
+                <input name="em" ng-model="em" class="form-control text-center" type="email" placeholder="User name or Email" required>
+                <span style="color: red;" ng-show="sForm.em.$error.required">Username or Email is required</span>
+                <span style="color: red;" ng-show="sForm.em.$error.email">invalid email</span>
+
+            </td></tr>
 
 
 
-        <div class="form-group">
-            <input  class="btn btn-dark" type="submit" ><br>
-        </div>
+            <tr><td>
+                <span class="la">Password</span>
+                <input name="ps" ng-model="ps" class="form-control  text-center" type="password" placeholder="Password" required>
+                <span style="color: red;" ng-hide="sForm.ps.$valid">Password is required</span>
 
-        <span>Already Register  </span><a href="#!login">click here</a><br><br>
+            </td></tr>
+
+            <tr><td>
+                <span class="la">Confirm Password</span>
+                <input name="cps" ng-model="cps" class="form-control  text-center" type="password" placeholder="Confirm Password" required>
+                <span style="color: red;" ng-hide="sForm.cps.$valid">Confirm Password is required</span>
+
+            </td></tr>
+
+            <tr><td>
+                <input  class="btn btn-dark" type="submit" ><BR>
+
+
+
+            </td></tr>
+
+
+
+
+
+
+            <tr><th>
+
+                <span>If you have already Register  </span><a href="#!login">click here</a>
+            </th></tr>
+
+
+        </table>
+
+
+
+
+
 
     </form>
 </div>

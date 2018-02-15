@@ -1,0 +1,28 @@
+table{
+ align-self: center;
+
+    padding: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background-color: beige;
+    border-radius: 3%;
+    border-bottom-color: coral;
+}
+td{
+    padding: 0px 30px 0px 30px;
+}
+th{
+    border-radius: 10%;
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+    background-color: brown;
+    color: aliceblue;
+}
+td span{
+    font-family: "Times New Roman";
+}
+td span.la{
+    font-family: "Times New Roman";
+    font-size:2em;
+    display: inline;
+}

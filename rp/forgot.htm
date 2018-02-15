@@ -4,23 +4,43 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <link rel="stylesheet" href="css/style.css"/>
 
 </head>
 
 <body ng-app="myApp" ng-controller="controller" >
 <div class="text-center">
-    <div style="font-family: 'Cooper Black' ;font-size: 2em;" class="well well-xs" >Forgot Password</div>
-    <form name="form" novalidate>
-        <div class="form-group">
+
+<form name="form">
+    <table align="center" >
+        <tr>
+            <th colspan="3">
+                <div style="font-family: 'Cooper Black' ;font-size: 2em;" >Forgot Password</div>
+            </th>
+        </tr>
+
+
+        <tr><td>
+            <span class="la">Email</span>
             <input name="ema" ng-model="ema" class="form-control text-center" type="email" placeholder="User name or Email" required>
             <span style="color: red;" ng-show="form.ema.$error.required">Username or Email is required</span>
-            <span style="color: red;" ng-show="form.ema.$error.email">invalid email</span><br>
-
-        </div>
-        <div class="form-group">
+            <span style="color: red;" ng-show="form.ema.$error.email">invalid email</span>
+        </td></tr>
+        <tr><td>
             <input  class="btn btn-dark" type="submit" ><br>
-        </div>
+
+        </td></tr>
+        <tr>
+            <th colspan="3">
+                <span>For log in </span><a href="#!login">click here</a>
+
+            </th>
+        </tr>
+
+
+    </table>
     </form>
 </div>
 </body>

@@ -4,37 +4,59 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+     <link rel="stylesheet" href="css/style.css"/>
 
 </head>
 
 <body ng-app="myApp" ng-controller="controller" >
 <div class="text-center">
-    <div style="font-family: 'Cooper Black' ;font-size: 2em;" class="well well-xs" >Log in</div>
-    <form name="myForm" novalidate>
+     <form name="myForm" novalidate>
+
+        <table align="center" >
+            <tr>
+                <th colspan="3">
+                    <div style="font-family: 'Cooper Black' ;font-size: 2em;"  >Log in</div>
+                </th>
+            </tr>
+
+
+            <tr><td>
+                <span class="la">Username</span>
+                <input name="email"  ng-model="email" class="form-control text-center" type="email" placeholder="User name or Email" required>
+                <span style="color: red;" ng-show="myForm.email.$error.required">Username or Email is required</span>
+                <span style="color: red;" ng-show="myForm.email.$error.email">invalid email</span>
+
+            </td></tr>
 
 
 
-        <div class="form-group">
-    <input name="email"  ng-model="email" class="form-control text-center" type="email" placeholder="User name or Email" required>
-            <span style="color: red;" ng-show="myForm.email.$error.required">Username or Email is required</span>
-            <span style="color: red;" ng-show="myForm.email.$error.email">invalid email</span><br>
-        </div>
 
-
-
-        <div class="form-group">
+<tr>
+    <td>
+        <span class="la" >Password</span>
     <input  name="pass"  ng-model="pass" class="form-control  text-center" type="password" placeholder="Password" required>
-            <span style="color: red;" ng-hide="myForm.pass.$valid">Password is required</span><br>
-</div>
+            <span style="color: red;" ng-hide="myForm.pass.$valid">Password is required</span>
+
+    </td>
+</tr>
 
 
+      <tr><td>
+          <input  class="btn btn-dark" type="submit"><BR>
 
-        <div class="form-group">
-    <input  class="btn btn-dark" type="submit">
-</div>
 
-      <span>  if you forget your password </span><a href="#!forgot">click here</a><br><br>
+      </td></tr>
+
+            <tr><th>
+                <span>  if you forget your password </span><a href="#!forgot">click here</a>
+
+
+            </th></tr>
+
+
+    </table>
     </form>
 
 
