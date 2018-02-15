@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+</head>
+
+<body ng-app="myApp" ng-controller="controller" >
+<div class="text-center">
+    <div style="font-family: 'Cooper Black' ;font-size: 2em;" class="well well-xs" >Forgot Password</div>
+    <form name="form" novalidate>
+        <div class="form-group">
+            <input name="ema" ng-model="ema" class="form-control text-center" type="email" placeholder="User name or Email" required>
+            <span style="color: red;" ng-show="form.ema.$error.required">Username or Email is required</span>
+            <span style="color: red;" ng-show="form.ema.$error.email">invalid email</span><br>
+
+        </div>
+        <div class="form-group">
+            <input  class="btn btn-dark" type="submit" ><br>
+        </div>
+    </form>
+</div>
+</body>
+</html>
