@@ -9,10 +9,10 @@ table{
     border-bottom-color: coral;
 }
 td{
-    padding: 0px 30px 0px 30px;
+    padding: 0px 30px 5px 30px;
 }
 th{
-    border-radius: 10%;
+    border-radius: 3%;
     padding: 10px 30px 10px 30px;
     text-align: center;
     background-color: brown;

@@ -7,12 +7,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
     <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/myangular.js"></script>
 
 </head>
 
 <body  ng-app="myApp" ng-controller="controller">
 <div class="text-center">
-    <form name="sForm" novalidate>
+    <form ng-submit="sSubmit()" name="sForm" novalidate>
         <table align="center">
             <tr>
                 <th colspan="3">
@@ -24,7 +25,7 @@
             <tr><td>
                 <span class="la">First Name</span>
                 <input name="fname" ng-model="fname" class="form-control text-center" type="text" placeholder="First name" required>
-                <span style="color: red;" ng-hide="sForm.fname.$valid">First Name is required</span>
+                <span style="color: red;" ng-show="(myForm.pass.$dirty || ssubmitted) && sForm.fname.$valid">First Name is required</span>
 
             </td></tr>
 
@@ -33,7 +34,7 @@
             <tr><td>
                 <span class="la">Last Name</span>
                 <input name="lname" ng-model="lname" class="form-control text-center" type="text" placeholder="Last name" required>
-                <span style="color: red;" ng-hide="sForm.lname.$valid">Last Name is required</span>
+                <span style="color: red;" ng-show="(myForm.pass.$dirty || ssubmitted) && sForm.lname.$valid">Last Name is required</span>
 
             </td></tr>
 
@@ -41,8 +42,8 @@
             <tr><td>
                 <span class="la">Email</span>
                 <input name="em" ng-model="em" class="form-control text-center" type="email" placeholder="User name or Email" required>
-                <span style="color: red;" ng-show="sForm.em.$error.required">Username or Email is required</span>
-                <span style="color: red;" ng-show="sForm.em.$error.email">invalid email</span>
+                <span style="color: red;" ng-show="(myForm.pass.$dirty || ssubmitted) && sForm.em.$error.required">Username or Email is required</span>
+                <span style="color: red;" ng-show="(myForm.pass.$dirty || ssubmitted) && sForm.em.$error.email">invalid email</span>
 
             </td></tr>
 
@@ -51,14 +52,14 @@
             <tr><td>
                 <span class="la">Password</span>
                 <input name="ps" ng-model="ps" class="form-control  text-center" type="password" placeholder="Password" required>
-                <span style="color: red;" ng-hide="sForm.ps.$valid">Password is required</span>
+                <span style="color: red;" ng-show="(myForm.pass.$dirty || ssubmitted) && sForm.ps.$valid">Password is required</span>
 
             </td></tr>
 
             <tr><td>
                 <span class="la">Confirm Password</span>
                 <input name="cps" ng-model="cps" class="form-control  text-center" type="password" placeholder="Confirm Password" required>
-                <span style="color: red;" ng-hide="sForm.cps.$valid">Confirm Password is required</span>
+                <span style="color: red;" ng-show="(myForm.pass.$dirty || ssubmitted) && sForm.cps.$valid">Confirm Password is required</span>
 
             </td></tr>
 

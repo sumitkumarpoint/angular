@@ -13,7 +13,7 @@
 <body ng-app="myApp" ng-controller="controller" >
 <div class="text-center">
 
-<form name="form">
+<form name="form" ng-submit="fSubmit()" novalidate>
     <table align="center" >
         <tr>
             <th colspan="3">
@@ -25,8 +25,8 @@
         <tr><td>
             <span class="la">Email</span>
             <input name="ema" ng-model="ema" class="form-control text-center" type="email" placeholder="User name or Email" required>
-            <span style="color: red;" ng-show="form.ema.$error.required">Username or Email is required</span>
-            <span style="color: red;" ng-show="form.ema.$error.email">invalid email</span>
+            <span style="color: red;" ng-show="(myForm.pass.$dirty || fsubmitted) && form.ema.$error.required">Username or Email is required</span>
+            <span style="color: red;" ng-show="(myForm.pass.$dirty || fsubmitted) && form.ema.$error.email">invalid email</span>
         </td></tr>
         <tr><td>
             <input  class="btn btn-dark" type="submit" ><br>

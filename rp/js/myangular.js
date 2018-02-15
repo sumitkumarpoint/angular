@@ -8,7 +8,36 @@ app.controller("controller",function($scope,$interval){
         }
     },2000);
 
+    $scope.lsubmitted = false;
+    $scope.ssubmitted = false;
+    $scope.fsubmitted = false;
+    $scope.sSubmit=function(){
+
+        $scope.ssubmitted = true;
+    };
+    $scope.fSubmit=function(){
+
+        $scope.fsubmitted = true;
+
+    };
+    $scope.lSubmit=function(){
+
+        $scope.lsubmitted = true;
+
+    };
+
+
+
+
+
+
 });
+
+
+
+
+
+
 
 app.config(function($routeProvider){
     $routeProvider

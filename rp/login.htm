@@ -7,12 +7,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
      <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/myangular.js"></script>
 
 </head>
 
 <body ng-app="myApp" ng-controller="controller" >
 <div class="text-center">
-     <form name="myForm" novalidate>
+     <form name="myForm" ng-submit="lSubmit()" novalidate>
+
 
         <table align="center" >
             <tr>
@@ -25,8 +27,9 @@
             <tr><td>
                 <span class="la">Username</span>
                 <input name="email"  ng-model="email" class="form-control text-center" type="email" placeholder="User name or Email" required>
-                <span style="color: red;" ng-show="myForm.email.$error.required">Username or Email is required</span>
-                <span style="color: red;" ng-show="myForm.email.$error.email">invalid email</span>
+                <span style="color: red;" ng-show="(myForm.pass.$dirty || lsubmitted) && myForm.email.$error.required">Username or Email is required</span>
+                <span style="color: red;" ng-show="(myForm.pass.$dirty || lsubmitted)&& myForm.email.$error.email">invalid email</span>
+
 
             </td></tr>
 
@@ -37,7 +40,10 @@
     <td>
         <span class="la" >Password</span>
     <input  name="pass"  ng-model="pass" class="form-control  text-center" type="password" placeholder="Password" required>
-            <span style="color: red;" ng-hide="myForm.pass.$valid">Password is required</span>
+            <span style="color: red;" ng-show="(myForm.pass.$dirty || lsubmitted) && myForm.pass.$error.required">
+     Password is required</span>
+
+
 
     </td>
 </tr>
