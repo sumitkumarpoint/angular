@@ -7,6 +7,7 @@ table{
     background-color: beige;
     border-radius: 3%;
     border-bottom-color: coral;
+    box-shadow: 0 0  13px gray;
 }
 td{
     padding: 0px 30px 5px 30px;
@@ -22,7 +23,18 @@ td span{
     font-family: "Times New Roman";
 }
 td span.la{
-    font-family: "Times New Roman";
+    font-family: Andalus;
+    text-shadow: 0 0 3px gray;
     font-size:2em;
     display: inline;
 }
+
+
+
+/*div.sticky {*/
+    /*position: -webkit-sticky; !* Safari *!*/
+    /*position: sticky;*/
+    /*top: 0;*/
+
+    /*border: 2px solid #4CAF50;*/
+/*}*/

@@ -7,6 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
     <link rel="stylesheet" href="css/style.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
     <script src="js/myangular.js"></script>
 
 </head>
@@ -25,7 +26,7 @@
             <tr><td>
                 <span class="la">First Name</span>
                 <input name="fname" ng-model="fname" class="form-control text-center" type="text" placeholder="First name" required>
-                <span style="color: red;" ng-show="(myForm.pass.$dirty || ssubmitted) && sForm.fname.$valid">First Name is required</span>
+                <span style="color: red;" ng-show="(myForm.pass.$dirty || ssubmitted) && !sForm.fname.$valid">First Name is required</span>
 
             </td></tr>
 
@@ -34,7 +35,7 @@
             <tr><td>
                 <span class="la">Last Name</span>
                 <input name="lname" ng-model="lname" class="form-control text-center" type="text" placeholder="Last name" required>
-                <span style="color: red;" ng-show="(myForm.pass.$dirty || ssubmitted) && sForm.lname.$valid">Last Name is required</span>
+                <span style="color: red;" ng-show="(myForm.pass.$dirty || ssubmitted) && !sForm.lname.$valid">Last Name is required</span>
 
             </td></tr>
 
@@ -52,19 +53,19 @@
             <tr><td>
                 <span class="la">Password</span>
                 <input name="ps" ng-model="ps" class="form-control  text-center" type="password" placeholder="Password" required>
-                <span style="color: red;" ng-show="(myForm.pass.$dirty || ssubmitted) && sForm.ps.$valid">Password is required</span>
+                <span style="color: red;" ng-show="(myForm.pass.$dirty || ssubmitted) && !sForm.ps.$valid">Password is required</span>
 
             </td></tr>
 
             <tr><td>
                 <span class="la">Confirm Password</span>
                 <input name="cps" ng-model="cps" class="form-control  text-center" type="password" placeholder="Confirm Password" required>
-                <span style="color: red;" ng-show="(myForm.pass.$dirty || ssubmitted) && sForm.cps.$valid">Confirm Password is required</span>
+                <span style="color: red;" ng-show="(myForm.pass.$dirty || ssubmitted) && !sForm.cps.$valid">Confirm Password is required</span>
 
             </td></tr>
 
             <tr><td>
-                <input  class="btn btn-dark" type="submit" ><BR>
+                <input  class="btn btn-dark" type="submit" ng-click="save()" ><BR>
 
 
 
