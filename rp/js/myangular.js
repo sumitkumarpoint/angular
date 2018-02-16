@@ -1,5 +1,50 @@
-var app=angular.module("myApp",["ngRoute"]);
-app.controller("controller",function($scope,$interval){
+var app=angular.module("myApp",["ngRoute","ngStorage"]);
+app.controller("controller",function($scope,$interval,$localStorage){
+
+
+
+    $scope.fname="";
+    $scope.lname="";
+    $scope.em="";
+    $scope.ps="";
+    $scope.email="";
+    $scope.pass="";
+    $scope.save=function() {
+        $localStorage.message={
+            "fname":$scope.fname,
+            "lname":$scope.lname,
+            "email":$scope.em,
+            "pass":$scope.ps};
+
+
+    }
+    $scope.fn=$localStorage.message.fname;
+    $scope.ln=$localStorage.message.lname;
+    $scope.e=$localStorage.message.email;
+    $scope.p=$localStorage.message.pass;
+$scope.page="";
+
+    $scope.get=function() {
+
+
+        if($localStorage.message.email==$scope.email && $localStorage.message.pass==$scope.pass){
+
+            alert("successfully login");
+            $scope.page="#!/about";
+        }
+        else {
+            alert("enter correct user name password");
+        }
+    }
+
+
+
+
+
+
+
+
+
     $scope.name=1;
     $interval(function(){
         $scope.name++
@@ -7,6 +52,11 @@ app.controller("controller",function($scope,$interval){
             $scope.name=1;
         }
     },2000);
+
+
+
+
+
 
     $scope.lsubmitted = false;
     $scope.ssubmitted = false;
@@ -26,17 +76,7 @@ app.controller("controller",function($scope,$interval){
 
     };
 
-
-
-
-
-
-
-
 });
-
-
-
 
 
 

@@ -6,15 +6,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
-     <link rel="stylesheet" href="css/style.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css"/>
     <script src="js/myangular.js"></script>
+
 
 </head>
 
 <body ng-app="myApp" ng-controller="controller" >
 <div class="text-center">
-     <form name="myForm" ng-submit="lSubmit()" novalidate>
-
+     <form name="myForm" action="{{page}}" ng-submit="get()" novalidate>
 
         <table align="center" >
             <tr>
@@ -22,6 +24,7 @@
                     <div style="font-family: 'Cooper Black' ;font-size: 2em;"  >Log in</div>
                 </th>
             </tr>
+
 
 
             <tr><td>
@@ -50,14 +53,13 @@
 
 
       <tr><td>
-          <input  class="btn btn-dark" type="submit" ><BR>
+          <input  class="btn btn-dark" type="submit" ng-click="kget()" ><BR>
 
 
       </td></tr>
 
             <tr><th>
                 <span>  if you forget your password </span><a href="#!forgot">click here</a>
-
 
             </th></tr>
 

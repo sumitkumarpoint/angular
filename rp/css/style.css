@@ -16,7 +16,7 @@ th{
     border-radius: 3%;
     padding: 10px 30px 10px 30px;
     text-align: center;
-    background-color: brown;
+    background-color: crimson;
     color: aliceblue;
 }
 td span{
@@ -28,7 +28,11 @@ td span.la{
     font-size:2em;
     display: inline;
 }
-
+ #sticky{
+     position:sticky !important;
+     position:-webkit-sticky !important;
+     top:0 !important;
+ }
 
 
 /*div.sticky {*/

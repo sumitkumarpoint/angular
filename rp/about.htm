@@ -6,13 +6,48 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/myangular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
 
 
 </head>
 
-<body ng-app="myApp" ng-controller="controller" >
+<body ng-app="myApp" ng-controller="controller"   >
 <div class="text-center">
+
+
     <div class="jumbotron"><h1 style="font-family: 'Cooper';">About Us</h1></div>
+    <table align="center">
+
+        <tr>
+            <td>first name :</td><td>{{fn}}</td>
+        </tr>
+
+        <tr>
+            <td>last name :</td><td>{{ln}}</td>
+        </tr>
+
+        <tr>
+            <td>Email :</td><td>{{e}}</td>
+        </tr>
+
+        <tr>
+            <!--<td>password :</td><td>{{p}}</td>-->
+        </tr>
+    </table>
 </div>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
 </body>
 </html>
