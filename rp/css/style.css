@@ -5,7 +5,7 @@ table{
  align-self: center;
 
     padding: 1em;
-    margin-top: 2em;
+    margin-top: 5em;
     margin-bottom: 2em;
     background-color: beige;
     border-radius: 3%;
@@ -39,20 +39,32 @@ td span.la{
 
 #footer{
 
+    background-color: rgba(0,0,0,0.8) !important;
     position:sticky !important;
     position:-webkit-sticky !important;
    bottom: 0 !important;
+    margin-top: 200px;
 
+}
+.bn a{
+
+    color: white !important;
+}
+.bn a:hover{
+
+    color: black !important;
+    font-family: cooper;
 }
 .bn:hover{
     background-color: darkgray;
 }
 .label{
-    border-bottom: 3px solid darkgray;
+    border-bottom: 5px solid darkgray;
     font-family: cooper;
     font-size: 2em;
     color: black;
 }
 nav{
-    opacity: 1 !important;
+    background-color: rgba(0,0,0,0.8) !important;
+
 }

@@ -42,7 +42,7 @@ app.controller("controller",function($scope,$interval,$localStorage) {
                 $scope.page = "about.htm";
             }
             else {
-                alert($localStorage.status);
+                alert("Enter Correct Username Password");
             }
         }
     }
@@ -64,7 +64,6 @@ $scope.logout=function(){
                 alert("Your password is:   "+$localStorage.message.pass);
             }
             else {
-                alert("Enter Your Correct Details");
                 alert("Enter Your Correct Details");
             }
         }
