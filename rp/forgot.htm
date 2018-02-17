@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="js/myangular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
-    <link rel="stylesheet" href="css/style.css"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body ng-app="myApp" ng-controller="controller" >
 <div class="text-center">
 
-<form name="form" ng-submit="fSubmit()" novalidate>
+    <div id="sticky" ng-include="'nav.htm'"></div>
+<form name="form" action="#" ng-submit="fSubmit()" novalidate>
     <table align="center" >
         <tr>
             <th colspan="3">
@@ -23,18 +27,34 @@
 
 
         <tr><td>
+            <span class="la">First Name</span>
+            <input name="fname" ng-model="f_name" class="form-control text-center" type="text" placeholder="First name" required>
+            <span style="color: red;" ng-show="(myForm.pass.$dirty || ssubmitted) && !form.fname.$valid">First Name is required</span>
+
+        </td></tr>
+
+
+
+        <tr><td>
+            <span class="la">Last Name</span>
+            <input name="lname" ng-model="l_name" class="form-control text-center" type="text" placeholder="Last name" required>
+            <span style="color: red;" ng-show="(myForm.pass.$dirty || ssubmitted) && !form.lname.$valid">Last Name is required</span>
+
+        </td></tr>
+
+        <tr><td>
             <span class="la">Email</span>
             <input name="ema" ng-model="ema" class="form-control text-center" type="email" placeholder="User name or Email" required>
             <span style="color: red;" ng-show="(myForm.pass.$dirty || fsubmitted) && form.ema.$error.required">Username or Email is required</span>
             <span style="color: red;" ng-show="(myForm.pass.$dirty || fsubmitted) && form.ema.$error.email">invalid email</span>
         </td></tr>
         <tr><td>
-            <input  class="btn btn-dark" type="submit" ><br>
+            <input  class="btn btn-dark" type="submit" ng-click="forget()"><br>
 
         </td></tr>
         <tr>
             <th colspan="3">
-                <span>For log in </span><a href="#!login">click here</a>
+                <span>For log in </span><a href="login.htm">click here</a>
 
             </th>
         </tr>
@@ -43,5 +63,7 @@
     </table>
     </form>
 </div>
+
+<div ng-include="'footer.htm'"></div>
 </body>
 </html>

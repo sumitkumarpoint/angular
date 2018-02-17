@@ -1,0 +1,19 @@
+
+
+<nav  class="navbar navbar-inverse" ng-app="myApp" ng-controller="controller">
+    <div class="container sticky">
+
+        <div class="navbar-header">
+            <a style="font-family: 'Cooper';font-size: 2.5em; color: azure" class="navbar-brand" href="home.htm">RealEstate</a>
+        </div>
+
+        <ul class="nav navbar-nav" >
+            <li class="bn"><a href="home.htm">Home</a></li>
+            <li class="bn" ng-if="!statu"><a href="signup.htm">Sign up</a></li>
+            <li class="bn" ng-if="!statu"><a href="login.htm">Log in</a></li>
+            <li class="bn" ><a href="contact.htm">Contact us</a></li>
+            <li class="bn"><a href="about.htm">About us</a></li>
+            <li class="bn" ng-if="statu"><a ng-click="logout()" style="float: right;right: 0;" href="login.htm">log out</a></li>
+        </ul>
+    </div>
+</nav>

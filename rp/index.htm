@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="js/myangular.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/myangular.js"></script>
 
 </head>
 
@@ -16,22 +17,9 @@
 <div class="container" style="background-color: cornsilk">
 
 
-    <nav id="sticky" class="navbar navbar-inverse">
-    <div class="container sticky">
 
-        <div class="navbar-header">
-            <a style="font-family: 'Cooper';font-size: 2.5em; color: azure" class="navbar-brand" href="#">RealEstate</a>
-        </div>
+    <div id="sticky" ng-include="'nav.htm'"></div>
 
-    <ul class="nav navbar-nav">
-        <li><a href="#/!">Home</a></li>
-    <li><a href="#!signup">Sign up</a></li>
-    <li><a href="#!login">Log in</a></li>
-    <li><a href="#!contact">Contact us</a></li>
-    <li><a href="#!about">About us</a></li>
-    </ul>
-    </div>
-</nav>
 
 
     <div ng-view></div>
@@ -39,9 +27,7 @@
 
 
 
-    <footer style="  background-color: #000; border-radius:5px;color: white; padding: 15px;"class="text-center">
-        <p> copyright</p>
-    </footer>
+
 
 
 

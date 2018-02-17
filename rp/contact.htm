@@ -5,21 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="js/myangular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
 
 
 </head>
 
 <body ng-app="myApp" ng-controller="controller" >
-<div class="text-center">
-    <div class="jumbotron">
-        <h1 style="font-family: 'Cooper';">contact us
-        </h1>
-        <p><span></span></p>
-        <p><span></span></p>
-        <p><span></span></p>
 
+
+<div id="sticky" ng-include="'nav.htm'"></div>
+<div class="text-center">
+    <div >
+        <h1 class="label">contact us
+        </h1>
+      <div class="row" style="font-family: cooper; margin-top: 50px;">
+
+          <div class="col-sm-4"><h3>Office in Noida</h3><p>Nirman Vihar</p>
+          </div>
+
+
+          <div class="col-sm-4"><h3>Office in Kanpur</h3></div>
+
+
+
+          <div class="col-sm-4"><h3>Office in Delhi</h3></div>
+
+      </div>
     </div>
 </div>
+<div ng-include="'footer.htm'"></div>
 </body>
 </html>

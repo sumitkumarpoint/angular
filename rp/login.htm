@@ -6,19 +6,20 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
-
     <link rel="stylesheet" href="css/style.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
     <script src="js/myangular.js"></script>
 
 
 </head>
 
 <body ng-app="myApp" ng-controller="controller" >
-<div class="text-center">
-     <form name="myForm" action="{{page}}" ng-submit="get()" novalidate>
 
-        <table align="center" >
+<div id="sticky" ng-include="'nav.htm'"></div>
+<div class="text-center">
+     <form name="myForm" action="{{page}}" ng-submit="sSubmit()" novalidate>
+
+        <table align="center">
             <tr>
                 <th colspan="3">
                     <div style="font-family: 'Cooper Black' ;font-size: 2em;"  >Log in</div>
@@ -53,13 +54,13 @@
 
 
       <tr><td>
-          <input  class="btn btn-dark" type="submit" ng-click="kget()" ><BR>
+          <input  class="btn btn-dark" type="submit" ng-click="get()" ><BR>
 
 
       </td></tr>
 
             <tr><th>
-                <span>  if you forget your password </span><a href="#!forgot">click here</a>
+                <span>  if you forget your password </span><a href="forgot.htm">click here</a>
 
             </th></tr>
 
@@ -67,6 +68,8 @@
     </table>
     </form>
 
+
+    <div ng-include="'footer.htm'"></div>
 
 </div>
 </body>

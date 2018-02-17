@@ -13,12 +13,12 @@
 
 </head>
 
-<body ng-app="myApp" ng-controller="controller"   >
+<body ng-app="myApp" ng-controller="controller"  >
+<div id="sticky" ng-include="'nav.htm'"></div>
 <div class="text-center">
 
-
-    <div class="jumbotron"><h1 style="font-family: 'Cooper';">About Us</h1></div>
-    <table align="center">
+    <div ><h1 class="label" ng>About Us</h1></div>
+    <table align="center" ng-if="statu">
 
         <tr>
             <td>first name :</td><td>{{fn}}</td>
@@ -36,9 +36,31 @@
             <!--<td>password :</td><td>{{p}}</td>-->
         </tr>
     </table>
-</div>
 
 
+  </div>
+
+
+
+
+
+
+<p style="margin-top: 70px">  I need to start this article by qualifying what makes an amazing About Us page. The reason for this is that some About Us pages look amazing but have terrible content whilst others look terrible but grab your attention immediately. The list I have compiled here are based on the fact that they:
+
+
+    Get the point across
+    First and foremost an About Us page has to get a point across. Everything else is completely useless unless the content and the layout is achieving a goal. That goal is to tell the user who you are by showing them what you can do for them or have done for others.
+    Give you the information you need
+    Some About Us pages spend the whole time talking about what it is that the company does and nothing about the staff members. Some do the opposite. Unless the page gives the information that you need based on the type of site you are on then it won’t make the list.
+    Give you social proof, testimonials and other authenticity statements
+    A good About Us page always needs to have some mention of past successes, achievements, social proof, etc. Giving concrete examples of why your site or blog is worth reading is extremely important for these pages.</p>
+
+
+
+
+
+
+<div ng-include="'footer.htm'"></div>
 
 </body>
 </html>

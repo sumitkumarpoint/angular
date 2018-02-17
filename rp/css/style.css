@@ -1,3 +1,6 @@
+body{
+    background-color: antiquewhite;
+}
 table{
  align-self: center;
 
@@ -34,11 +37,22 @@ td span.la{
      top:0 !important;
  }
 
+#footer{
 
-/*div.sticky {*/
-    /*position: -webkit-sticky; !* Safari *!*/
-    /*position: sticky;*/
-    /*top: 0;*/
+    position:sticky !important;
+    position:-webkit-sticky !important;
+   bottom: 0 !important;
 
-    /*border: 2px solid #4CAF50;*/
-/*}*/
+}
+.bn:hover{
+    background-color: darkgray;
+}
+.label{
+    border-bottom: 3px solid darkgray;
+    font-family: cooper;
+    font-size: 2em;
+    color: black;
+}
+nav{
+    opacity: 1 !important;
+}

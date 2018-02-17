@@ -3,14 +3,22 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="js/myangular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body ng-app="myApp" ng-controller="controller" >
+
+
+
+
+<div id="sticky" ng-include="'nav.htm'"></div>
     <div class="thumbnail"><img src="images/{{name}}.jpg" alt="image"/>
 <h3>
     Easy way to find your Dream Home
@@ -20,5 +28,8 @@
         </p>
 
 </div>
+
+
+<div ng-include="'footer.htm'"></div>
 </body>
 </html>
