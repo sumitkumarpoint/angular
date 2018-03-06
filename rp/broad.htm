@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body ng-app="myApp" ng-controller="myCtrl">
+
+<div >
+    Name: <input type="number" ng-model="name">
+    <input type="button" ng-click="f()" value="click">
+    <h1>You entered: {{name}}</h1>
+
+</div>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope,$interval) {
+        $scope.name =null;
+        $scope.image="";
+        $scope.f=function(){
+            $interval(function () {
+                if($scope.name>0)
+                {
+                    $scope.name = $scope.name - 1;
+                }
+                else{
+                    $scope.image="./images/1.jpg";
+                }
+
+            },(300))
+
+        }
+
+    });
+</script>
+<img src="{{image}}" alt="image" />{{image}}
+
+<p>Change the name inside the input field, and you will see the name in the header changes accordingly.</p>
+
+</body>
+</html>

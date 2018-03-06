@@ -1,0 +1,239 @@
+<html>
+<head>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
+
+</head>
+
+<body ng-app="naut" ng-controller="highchartcontroller">
+
+
+<style>
+  input{
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid gray;
+    margin-top: 3px;
+  }
+</style>
+<div align="center"  >
+  <table  style="text-align: center" >
+<tr >
+  <td colspan="2"><h1>Details</h1></td>
+</tr>
+    <tr>
+      <td>User Name:</td><td><input ng-model="use" type="text"></td>
+    </tr>
+    <tr>
+      <td>
+        Age:</td><td><input  type="number" ng-model="age">      </td>
+    </tr>
+    <tr>
+      <td>   Country:</td><td><input ng-model="cou" type="text">
+      </td>
+    </tr>
+<tr>
+  <td>
+    State:</td><td><input  type="text" ng-model="sta">
+  </td>
+</tr>
+
+    <tr>
+      <td>
+        Is Phone available:</td><td><input ng-model="pho" type="checkbox">
+
+      </td>
+    </tr>
+ <tr>
+      <td>
+        Is Email available:</td><td><input  type="checkbox" ng-model="ema">
+
+ </td>
+    </tr>
+
+    <tr>
+      <td>
+        Sallary:</td><td><input ng-model="sal" type="number">
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+
+        Company:</td><td><input  type="text" ng-model="com">
+
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Designation:</td><td><input  type="text" ng-model="des"><br>
+
+      </td>
+    </tr>
+    <tr >
+      <td colspan="2">
+        <input type="submit" ng-click="save()">
+      </td>
+
+    </tr>
+
+
+  </form>
+
+    <ul>
+      <li ng-repeat="data in details">
+        {{data}}
+      </li>
+    </ul>
+
+    <div >
+      <tr>
+        <td>User Name:</td><td>{{data.user}}</td>
+        {{data}}
+      </tr>
+      <tr>
+        <td>
+          Age:</td><td>{{data.age}}</td>
+      </tr>
+      <tr>
+        <td>   Country:</td><td>{{data.country}}
+      </td>
+      </tr>
+      <tr>
+        <td>
+          State:</td><td>{{data.state}}</td>
+      </tr>
+
+      <tr>
+        <td>
+          Is Phone available:</td><td>{{data.phone}}</td>
+      </tr>
+      <tr>
+        <td>
+          Is Email available:</td><td>{{data.email}}</td>
+      </tr>
+
+      <tr>
+        <td>
+          Sallary:</td><td>{{data.sallary}}</td>
+      </tr>
+
+      <tr>
+        <td>
+
+          Company:</td><td>{{data.country}}</td>
+      </tr>
+      <tr>
+        <td>
+          Designation:</td><td>{{data.designation}}</td>
+      </tr>
+
+
+    </div>
+  </table>
+  <br>  <br>
+
+
+  Chart Type:<select ng-model="charttype">
+  <option value="line">line</option>
+  <option value="bar">bar</option>
+  <option  value="column">column</option>
+  <option  value="pie">pie</option>
+
+</select>
+  <input type="button" ng-click="get()" value="Bar Chart">
+
+  <div id="container" style="width:50%; height:400px;"></div>
+
+</div>
+
+<!--<highchart id="chart" config="chartConfig"></highchart>-->
+
+  <script>
+    var app=angular.module('naut',['ngStorage']);
+    app.controller('highchartcontroller',function($scope,$localStorage){
+
+        var students = [];
+
+
+        $scope.student1 = {
+            'user': "sumit",
+            'age': 23,
+            'country': "india",
+            'state':"u.p.",
+            'phone': 3563787,
+            'email':"sumit@gmail.com ",
+            'sallary': 0,
+            'company': "algo",
+            'designation': "trainee"
+        }
+        students.push($scope.student1);
+
+        localStorage.setItem("students", JSON.stringify(students));
+
+        var stored = JSON.parse(localStorage.getItem("students"));
+
+
+
+
+       $scope.save=function () {
+           $localStorage.student2 = {
+                   'user': $scope.use,
+                   'age': $scope.age,
+                   'country': $scope.cou,
+                   'state': $scope.sta,
+                   'phone': $scope.pho,
+                   'email': $scope.ema,
+                   'sallary': $scope.sal,
+                   'company': $scope.com,
+                   'designation': $scope.des
+           }
+           stored.push($localStorage.student2);
+
+           localStorage.setItem("students", JSON.stringify(stored));
+
+
+          $localStorage.result = JSON.parse(localStorage.getItem("students"));
+
+
+       }
+      $scope.details=$localStorage.result;
+
+
+        $scope.charttype='bar';
+        $scope.da=$localStorage.message;
+       $scope.get=function () {
+           Highcharts.chart('container', {
+               chart: {
+                   type: $scope.charttype
+               },
+               title: {
+                   text: 'Fruit Consumption'
+               },
+               xAxis: {
+                   title:{text:'Fruits'},
+
+                   categories: [ 'age', 'sallary']
+               },
+               yAxis: {
+                   title: {
+                       text: 'Fruit eaten'
+                   }
+               },
+               series: [{
+                   showInLegend:true,
+                   name:'jone',
+                   data: [1,3]
+               }, {
+                   showInLegend:true,
+                   name:  'john',
+                   data: [5,1]
+               }]
+           });
+       }
+    });
+</script>
+</body>
+</html>

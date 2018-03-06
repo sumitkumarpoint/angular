@@ -1,0 +1,43 @@
+<html>
+<head>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
+
+</head>
+
+<body ng-app="myApp" ng-controller="myctrl">
+<div id="container" style="width:100%; height:400px;"></div>
+<script>
+   var app=angular.module('myApp',["ngStorage"]);
+   app.controller('myctrl',function($scope,$localStorage){
+       $scope.da=$localStorage.message;
+        var myChart = Highcharts.chart('container', {
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: 'Fruit Consumption'
+            },
+            xAxis: {
+                title:{text:'Fruits'},
+
+                categories: [ $scope.da.fname, 'Banana', 'Oranges']
+            },
+            yAxis: {
+                title: {
+                    text: 'Fruit eaten'
+                }
+            },
+            series: [{
+                name: 'Jane',
+                data: [1, 0, 4]
+            }, {
+                name: 'John',
+                data: [5, 7, 3]
+            }]
+        });
+    });
+</script>
+</body>
+</html>

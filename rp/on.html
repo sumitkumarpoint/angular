@@ -1,0 +1,54 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+
+<body ng-app="myapp">
+<div ng-controller="MyController1">
+    {{Message}}
+    <button ng-click="OnClick()">click</button>
+
+</div>
+<div ng-controller="MyController3">
+
+    {{Message}}
+
+</div >
+
+<div>
+
+
+
+</div>
+<script>
+var app=angular.module("myapp",[]);
+app.controller("MyController1", function ($scope, $rootScope) {
+    //raise event on $rootScope
+    $scope.OnClick = function (evt) {
+        $rootScope.$broadcast("SendDown", "some data");
+    }
+
+    //event handler
+    $scope.$on("SendDown", function (evt, data) {
+        $scope.Message = "Inside MyController1 : " + data;
+    });
+
+});
+
+app.controller("MyController2", function ($scope, $rootScope) {
+    //event handler
+    $scope.$on("SendDown", function (evt, data) {
+        $scope.Message = "Inside MyController2 : " + data;
+    });
+
+});
+
+app.controller("MyController3", function ($scope, $rootScope) {
+    //event handler
+    $scope.$on("SendDown", function (evt, data) {
+        $scope.Message = "Inside MyController3 : " + data;
+    });
+});
+</script>
+</body>
+</html>
